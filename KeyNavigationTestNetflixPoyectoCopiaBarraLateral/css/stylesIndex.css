@@ -1,0 +1,402 @@
+.hidden {
+  display: none;
+}
+/**/
+.profile-image {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background-color: #000000f9;
+  padding: 20px;
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  border: #fff;
+  opacity: 15%;
+  class: hidden-text; /* add this line */
+}
+
+.sidenav:hover ~ .hidden {
+  display: block;
+  transition: all;
+  transition-duration: 80ms;
+  opacity: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333333f9;
+  padding: 20px;
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  border: #fff;
+}
+
+.sidenav.focused {
+  transition: all;
+  transition-duration: 80ms;
+  opacity: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333333f9;
+  padding: 20px;
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  border: #fff;
+}
+
+.sidenav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.sidenav li {
+  margin-bottom: 20px;
+}
+
+.sidenav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidenav a:hover {
+  color: #ccc;
+}
+
+.sidenav i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.sidebar-text-user {
+  margin-bottom: 0px;
+  padding: 0%;
+}
+.user-whole {
+  width: 150px;
+  display: flex;
+  margin-left: 0%;
+}
+.user-texts-navbar {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  padding: 0%;
+  margin: 0%;
+}
+.sidebar-text-user {
+  color: #fff;
+}
+.sidebar-text-user-switch {
+  color: #fff;
+  font-size: x-small;
+}
+
+.central-sidenavbar-info {
+  margin-top: 100%;
+  margin-bottom: 100%;
+}
+
+.sideNavBar-icon {
+  height: 20px;
+  filter: invert(1);
+  margin-right: 5px;
+}
+
+.down-sidenavbar-info {
+  height: 40px;
+  display: flex;
+}
+.li-down {
+  margin: 0%;
+  padding: 0%;
+  top: 0%;
+  right: 0%;
+}
+.down-text {
+  font-size: small;
+  margin: -10%;
+}
+
+/**/
+
+body {
+  font-family: Arial, sans-serif;
+  margin-left: 80px;
+  padding: 0.5;
+  background-color: #141414;
+  overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+nav li:hover {
+  scale: 120%;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.button-user {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.button-user:hover {
+  scale: 120%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main {
+  align-items: baseline;
+  display: flexbox;
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-top: 0%;
+}
+
+.banner {
+  margin-top: 4.5%;
+  margin-left: 80px;
+  margin-bottom: 0; /* remove the margin-bottom */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* add this to ensure it's on top of other elements */
+}
+
+.banner-content {
+  width: auto;
+  height: 420px;
+}
+
+.banner-content {
+  position: relative;
+}
+
+.rows-content {
+  margin-top: 32%;
+  height: 210px;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  overflow-y: hidden;
+}
+
+.movie-info {
+  position: absolute;
+  top: 35%; /* center the text vertically */
+  left: 20px; /* adjust the left margin to your liking */
+  transform: translateY(-50%); /* center the text vertically */
+  color: #fff; /* set the text color to white */
+  z-index: 2; /* ensure the text is on top of the overlay */
+  width: 40%;
+  justify-content: baseline;
+}
+
+.movie-title {
+  font-size: 40px; /* adjust the font size to your liking */
+  font-weight: bold; /* make the title bold */
+  margin-bottom: 10px; /* add some space between the title and overview */
+}
+
+.movie-overview {
+  font-size: 20px; /* adjust the font size to your liking */
+  display: -webkit-box; /* for Safari and Chrome */
+  display: -ms-flexbox; /* for IE and Edge */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+}
+
+.banner-image {
+  position: relative;
+  padding-left: 49%;
+  margin-top: -5%;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  width: 100%;
+  height: 100%;
+}
+
+.blurred-left-border {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  margin-left: 51%;
+  bottom: 0%;
+  width: 10%; /* adjust the width to control the overlay area */
+  height: 105%;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+  filter: blur(10px); /* adjust the blur amount to your liking */
+  pointer-events: none;
+  z-index: 2; /* ensure the overlay is on top of the banner image */
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  bottom: 0%;
+  width: 62%; /* adjust the width to control the overlay area */
+  height: 105%;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.53)
+  );
+  filter: blur(10px); /* adjust the blur amount to your liking */
+  pointer-events: none;
+  z-index: 1; /* ensure the overlay is on top of the banner image */
+}
+
+.category-name {
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  padding-left: 20px;
+  font-size: large;
+  padding-top: 0%;
+  z-index: 2;
+}
+
+.category-row {
+  margin-bottom: 20px;
+  height: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.category-row h2 {
+  margin-top: 0;
+  margin-bottom: 50;
+}
+
+.movieListElement {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 10px;
+  scroll-snap-align: start;
+  min-height: 60vh;
+}
+
+.row-content {
+  padding-left: 20px;
+  padding-top: -10px;
+  scroll-snap-type: mandatory;
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  height: 220px; /* Set a fixed height for the row */
+}
+
+.thumbnail {
+  display: inline-block;
+  margin-right: 10px;
+  width: 250px; /* Set a fixed width for the thumbnails */
+  position: relative;
+}
+
+.thumbnail img {
+  width: 250px;
+  height: 150px;
+  object-fit: fill;
+  border-radius: 20px;
+  margin-right: 5%;
+}
+
+.thumbnail img:hover,
+.thumbnail:hover > img {
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 10ms;
+  border: 3px solid #ffffff;
+}
+
+.thumbnail:hover > img,
+.thumbnail:hover > h2 {
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.thumbnail.focused {
+  transform: scale(1.02);
+  transition: all;
+  transition-duration: 10ms;
+  border-radius: 20px;
+}
+
+.thumbnail h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}

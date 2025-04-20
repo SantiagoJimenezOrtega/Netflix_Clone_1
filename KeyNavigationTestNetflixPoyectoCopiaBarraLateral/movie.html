@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- include CAPH 3.0.1 default package -->
+  <link href="lib/caph/3.0.1/caph.min.css" rel="stylesheet" type="text/stylesheet" />
+  <!-- include jQuery file (you can use AngularJS & jQuery in your environment) -->
+  <script src="lib/caph/3.0.1/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="lib/caph/3.0.1/bower_components/angular/angular.min.js" type="text/javascript"></script>
+  <!-- include the CAPH Package for AngularJS -->
+  <script src="lib/caph/3.0.1/caph-angular.min.js"></script>
+  <link rel="stylesheet" href="css/movie.css" />
+  <title>Selected Movie</title>
+  
+  </head>
+</head>
+<style>
+  body {
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .return-button {
+    position: absolute;
+    color: rgb(178, 178, 178);
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .gradient-overlay {
+    position: initial;
+    width: 100%;
+    height: 110vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg,
+        rgb(1, 0, 26) 0%,
+        rgba(0, 0, 0, 0) 100%,
+        rgba(0, 212, 255, 1) 100%);
+    z-index: 1;
+  }
+
+  .movie-info {
+    position: fixed;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .overview {
+    text-align: justify;
+    padding: 15px;
+  }
+
+
+  .step-box {
+    padding: 17px;
+    width: 950px;
+    background-color: #f1f1f1;
+  }
+
+  .step-box>.title>b:first-child {
+    font-size: 20px;
+  }
+
+  .step-box>.code {
+    margin-top: 20px;
+    color: #666666;
+    border-left: 4px solid #009688;
+    width: 80%;
+    margin-left: 68px;
+    padding-left: 2%;
+    line-height: 170%;
+    background-color: white;
+  }
+
+  .list-container {
+    height: 330px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link {
+    color: gray;
+  }
+
+  a:visited {
+    color: gray;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .wrapper {
+    margin-top: -2.8%;
+    font-family: tahoma;
+    font-size: 17px;
+    width: 1000px;
+    font-weight: 500;
+  }
+
+  .wrapper h1 {
+    font-weight: 500;
+  }
+
+  .footer {
+    margin: 30px 0;
+  }
+
+  .content {
+    margin: 40px 0;
+  }
+</style>
+<script>
+  var myApp = angular.module("myApp", ["caph.focus"]);
+  myApp.controller("myController", function ($scope, $focus) {
+    $scope.focus = function ($event) {
+      console.log("Focused element:", $event.target);
+      $($event.currentTarget).css({
+        border: "3px solid red",
+      });
+    };
+
+    $scope.blur = function ($event) {
+      $($event.currentTarget).css({
+        border: "3px solid transparent",
+      });
+    };
+
+    $scope.select = function ($event) {
+      $($event.currentTarget).toggleClass("selected");
+    };
+
+    
+    document.addEventListener(
+      "focus",
+      function (event) {
+        console.log("Focused element:", document.activeElement);
+      },
+      true
+    );
+  });
+</script>
+
+<script>
+  angular.module("myApp", ["caph.focus"]).controller("myController", function ($scope, $focus) {
+    $scope.handleKeyPress = function ($event) {
+      if (event.key === "Enter") {
+        window.location.href = "index.html";
+      }
+    };
+  });
+</script>
+
+<body >
+  <div class="wrapper" ng-app="myApp">
+    <div class="content">
+      <div class="list-container" ng-controller="myController">
+        <div class="gradient-overlay" tabindex="-1" ng-controller="myController">
+          
+          <div class="page-content">
+            <script src="js/movie.js"></script>
+          </div>
+          <div class="icons-under-description">
+            <img focusable class="dislike" src="/image/no-me-gusta.png" alt="dislike-icon" />
+            <img focusable class="like" src="/image/no-me-gusta.png" alt="like" />
+            <img focusable class="love-it" src="/image/love it.png" alt="love-it" />
+          </div>
+          <div class="buttons">
+            <button focusable data-focusable-initial-focus="true" class="action-button">
+              <img class="play-icon" src="/image/play.png" alt="play-icon" />
+              Play
+            </button>
+            <button focusable class="action-button">
+              <img class="play-icon" src="/image/play.png" alt="play-icon" />Play Trailer
+            </button>
+            <button focusable class="action-button">
+              <img class="play-icon" src="/image/menu (1).png" alt="play-icon" />More Like This
+            </button>
+            <button focusable class="action-button">
+              <img class="play-icon" src="/image/me-gusta (1).png" alt="play-icon" />Favorites
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="footer"></div>
+  </div>
+</body>
+
+</html>

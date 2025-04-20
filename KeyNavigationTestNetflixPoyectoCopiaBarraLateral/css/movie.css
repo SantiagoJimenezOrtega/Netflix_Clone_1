@@ -1,0 +1,186 @@
+body {
+  background-image: url("image.jpg");
+  background-size: auto;
+  background-position: center;
+  filter: contrast(1s) brightness(1.1) saturate(1.5);
+}
+
+.page-content {
+  position: static;
+  padding: auto;
+  margin-left: 1%;
+}
+.movie-info {
+  top: 25%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: #fff;
+}
+
+.title {
+  margin-left: 1.5%;
+  font-size: 5em;
+  text-shadow: #585858;
+  width: 1000px;
+}
+
+.overview {
+  margin-top: 1%;
+  margin-left: 2%;
+  font-size: 1.5em;
+  padding: 0%;
+  width: 750px;
+  justify-content: flex-start;
+}
+
+.focused {
+  transition: all;
+  transition-duration: 10ms;
+  filter: brightness(20);
+  filter: saturate(20);
+}
+
+.return-button {
+  outline: none;
+}
+
+.Home-Button {
+  filter: invert(1);
+  position: relative;
+  height: 50px;
+}
+
+.Home-Button:hover {
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.Home-Button.focused {
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.icons-under-description {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  height: 40px;
+  padding-top: 42%;
+  padding-left: 6%;
+  padding-right: 80%;
+}
+
+.dislike {
+  filter: invert(1);
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.like {
+  filter: invert(1);
+  rotate: 180deg;
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.love-it {
+  filter: invert(1);
+  rotate: 180deg;
+  transform: scale(1.05);
+  transition: all;
+  transition-duration: 10ms;
+  text-shadow: 0 0 50px rgb(255, 255, 255);
+}
+/*HOVER HANDS*/
+.dislike:hover {
+  transform: scale(1.3);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.like:hover {
+  transform: scale(1.3);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.love-it:hover {
+  transform: scale(1.3);
+  transition: all;
+  transition-duration: 10ms;
+}
+/*Focused hands*/
+.dislike.focused {
+  transform: scale(1.3);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.like.focused {
+  transform: scale(1.3);
+  transition: all;
+  transition-duration: 10ms;
+}
+
+.love-it.focused {
+  transform: scale(1.3);
+  transition: all;
+  transition-duration: 10ms;
+}
+/**/
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 4%;
+  width: 40%;
+  overflow-x: hidden;
+  height: 220px;
+  padding: 1%;
+}
+
+.action-button {
+  background-color: transparent;
+  margin-top: -2px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 13px 10px;
+  text-decoration: none;
+  text-align: left;
+}
+.action-button:hover {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.action-button:hover .play-icon {
+  filter: invert(0);
+}
+/*Buttons Focus*/
+.action-button.focused {
+  transform: scale(1.03);
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.action-button.focused .play-icon {
+  filter: invert(0);
+}
+/* -----------------*/
+.action-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.play-icon {
+  width: 15px;
+  filter: invert(1);
+  padding-top: 2%;
+  margin-right: 8px;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FELIX</title>
+  <link rel="icon" type="image/x-icon" href="/image/cat.ico" />
+  <link rel="stylesheet" href="css/stylesIndex.css" />
+  <link rel="stylesheet" href="css/Nav.css" />
+  <script src="js/moviesFetch.js"></script>
+  <!-- include CAPH 3.0.1 default package -->
+  <link href="lib/caph/3.0.1/caph.min.css" rel="stylesheet" type="text/stylesheet" />
+  <!-- include jQuery file (you can use AngularJS & jQuery in your environment) -->
+  <script src="lib/caph/3.0.1/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="lib/caph/3.0.1/bower_components/angular/angular.min.js" type="text/javascript"></script>
+  <!-- include the CAPH Package for AngularJS -->
+  <script src="lib/caph/3.0.1/caph-angular.min.js"></script>
+</head>
+
+<body>
+  <nav focusable class="sidenav" tabindex="1">
+    <ul>
+      <div class="user-whole">
+        <img tabindex="2" src="/image/userImage.png" alt="user profile picture" class="profile-image" />
+        <div class="user-texts-navbar">
+
+          <b class="sidebar-text-user" > FELIX<b />
+
+            <li class="sidebar-text-user-switch">
+              <a focusable href="#" tabindex="" > <small> Switch user</small> </a>
+            </li>
+        </div>
+      </div>
+    </ul>
+    <div class="central-sidenavbar-info">
+      <ul>
+        <li>
+          <a href="#"><i class="central-icons"></i> <img src="/image/iconsSideNavBar/lupa.png" alt="search Icon"
+              class="sideNavBar-icon" /> <b >Search</b></a>
+        </li>
+        <li>
+          <a href="#"><i class="central-icons"></i> <img src="/image/iconsSideNavBar/hogar.png" alt="search Icon"
+              class="sideNavBar-icon" /> <b >Home</b> </a>
+        </li>
+        <li>
+          <a href="#"><i class="central-icons"></i> <img src="/image/iconsSideNavBar/television.png" alt="search Icon"
+              class="sideNavBar-icon" /> <b >Series</b></a>
+        </li>
+        <li>
+          <a href="#"><i class="central-icons"></i> <img src="/image/iconsSideNavBar/claqueta.png" alt="search Icon"
+              class="sideNavBar-icon" /> <b >Movies</b></a>
+        </li>
+        <li>
+          <a href="#"><i class="central-icons"></i> <img src="/image/iconsSideNavBar/plus-pequeno.png" alt="search Icon"
+              class="sideNavBar-icon" /> <b >My List</b></a>
+        </li>
+        <li>
+          <a href="#"><i class="central-icons"></i> <img src="/image/iconsSideNavBar/calendario.png" alt="search Icon"
+              class="sideNavBar-icon" /> <b >New</b></a>
+        </li>
+      </ul>
+    </div>
+    <div class="down-sidenavbar-info">
+      <ul>
+        <li class="li-down">
+          <a href="#" class="down-text" ><i></i> Settings</a>
+        </li>
+        <li class="li-down">
+          <a href="#" class="down-text" ><i></i> Exit Felix</a>
+        </li>
+      </ul>
+    </div>
+    
+  </nav>
+
+  
+  
+
+
+
+  <main>
+    <div class="banner">
+      <div class="banner-content">
+        <img class="banner-image" src="" alt="Focused Movie Image" id="focused-movie-image" />
+        <div class="blurred-left-border"></div>
+        <div class="gradient-overlay"></div>
+        <div class="movie-info">
+          <h2 class="movie-title">Movie Title</h2>
+          <p class="movie-overview">Movie Overview</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rows-content">
+      <section class="category-row-1" id="netflixOriginals">
+        <div>
+          <h2 class="category-name">Netflix Originals</h2>
+          <div class="row-content" tabindex="0">
+            <!-- content will be generated dynamically -->
+          </div>
+        </div>
+      </section>
+      <section class="category-row-2" id="trendingNow">
+        <h2 class="category-name">Trending Now</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+      <section class="category-row-3" id="topRated">
+        <h2 class="category-name">Top Rated</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+      <section class="category-row-4" id="actionMovies">
+        <h2 class="category-name">Action Movies</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+      <section class="category-row-5" id="comedyMovies">
+        <h2 class="category-name">Comedy Movies</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+      <section class="category-row-6" id="horrorMovies">
+        <h2 class="category-name">Horror Movies</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+      <section class="category-row-7" id="romanceMovies">
+        <h2 class="category-name">Romance Movies</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+      <section class="category-row-8" id="documentaries">
+        <h2 class="category-name">Documentaries</h2>
+        <div class="row-content" tabindex="0">
+          <!-- content will be generated dynamically -->
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
